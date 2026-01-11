@@ -1,0 +1,165 @@
+:root {
+  --lila: #c6b7e2;
+  --celeste: #bfe3ea;
+  --coral: #f2a7a0;
+  --texto: #4a4a4a;
+  --blanco: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  color: var(--texto);
+  background: var(--blanco);
+  line-height: 1.6;
+}
+
+/* ---------- HEADER / NAV ---------- */
+header {
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding: 1rem 2rem;
+}
+
+nav {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav strong {
+  font-family: "Playfair Display", serif;
+  font-size: 1.4rem;
+  color: #6a5acd;
+}
+
+nav a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: var(--texto);
+  font-weight: 500;
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--coral);
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+
+/* ---------- HERO ---------- */
+.hero {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(
+    135deg,
+    var(--lila) 0%,
+    var(--celeste) 45%,
+    var(--coral) 100%
+  );
+}
+
+.hero h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+}
+
+/* ---------- BOTÓN ---------- */
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 1.1rem 2.6rem;   /* MÁS ESPACIO */
+  border-radius: 40px;      /* Más suave */
+  background: var(--coral);
+  color: var(--blanco);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+
+  min-width: 240px;         /* ANCHO MÍNIMO */
+  margin-top: 1.2rem;       /* AIRE ARRIBA */
+
+  text-align: center;
+  line-height: 1.2;
+  
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* ---------- SECCIONES ---------- */
+section {
+  padding: 4rem 2rem;
+}
+
+.section-light {
+  background: #f9f9fb;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.card {
+  background: var(--blanco);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+  color: var(--lila);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+
+/* ---------- FOOTER ---------- */
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+  background: #f1f1f1;
+}
