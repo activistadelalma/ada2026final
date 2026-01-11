@@ -14,10 +14,12 @@
 
 body {
   font-family: "Inter", system-ui, sans-serif;
+  font-size: 17px;          /* antes ~16px */
   color: var(--texto);
   background: var(--blanco);
-  line-height: 1.6;
+  line-height: 1.7;         /* más aire */
 }
+
 
 /* ---------- HEADER / NAV ---------- */
 header {
@@ -38,18 +40,23 @@ nav {
 }
 
 nav strong {
-  font-family: "Playfair Display", serif;
-  font-size: 1.4rem;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.9rem;        /* más grande */
+  font-weight: 600;
   color: #6a5acd;
+  letter-spacing: 0.5px;
 }
 
+
 nav a {
-  margin-left: 1.5rem;
+  margin-left: 1.8rem;
   text-decoration: none;
   color: var(--texto);
   font-weight: 500;
+  font-size: 1.05rem;       /* más grande */
   position: relative;
 }
+
 
 nav a::after {
   content: "";
@@ -84,10 +91,12 @@ nav a:hover::after {
 }
 
 .hero h1 {
-  font-family: "Playfair Display", serif;
-  font-size: 3rem;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 3.4rem;        /* antes ~3rem */
+  font-weight: 600;
   margin-bottom: 1rem;
 }
+
 
 .hero p {
   font-size: 1.2rem;
@@ -119,7 +128,7 @@ nav a:hover::after {
 
   text-align: center;
   line-height: 1.2;
-  
+
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -148,12 +157,16 @@ section {
 }
 
 .card h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.4rem;
+  font-weight: 600;
   color: var(--lila);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.6rem;
   display: flex;
   align-items: center;
   gap: 0.4rem;
 }
+
 
 
 /* ---------- FOOTER ---------- */
